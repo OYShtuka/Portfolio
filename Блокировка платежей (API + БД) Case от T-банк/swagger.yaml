@@ -1,0 +1,156 @@
+openapi: 3.0.3
+info:
+  title: Block Client API
+  version: 0.1.0
+  description: API для управления блокировкой клиентов
+paths:
+  '/api/client/{client_id}/block':
+    post:
+      tags:
+        - Block Clients
+      operationId: block_client
+      summary: Заблокировать платежи клиенту
+      parameters:
+        - name: client_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            title: Client Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BlockRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseModel'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  '/api/client/{client_id}/unblock':
+    post:
+      tags:
+        - Block Clients
+      operationId: unblock_client
+      summary: Разблокировать платежи клиенту
+      parameters:
+        - name: client_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            title: Client Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseModel'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  '/api/client/{client_id}/is_block':
+    get:
+      tags:
+        - Block Clients
+      operationId: is_block
+      summary: Получить статус блокировки клиента
+      parameters:
+        - name: client_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            title: Client Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseModel'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    BlockRequest:
+      type: object
+      properties:
+        block_type:
+          type: integer
+          title: Block Type
+        description:
+          type: string
+          nullable: true
+          title: Description
+        end_date:
+          type: string
+          nullable: true
+          title: End Date
+      required:
+        - block_type
+      title: BlockRequest
+    HTTPValidationError:
+      type: object
+      properties:
+        detail:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+      title: HTTPValidationError
+    ResponseModel:
+      type: object
+      properties:
+        data:
+          type: object
+          nullable: true
+          title: Data
+        success:
+          type: boolean
+          title: Success
+        error:
+          type: object
+          nullable: true
+          title: Error
+      required:
+        - success
+      title: ResponseModel
+    ValidationError:
+      type: object
+      properties:
+        loc:
+          type: array
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
