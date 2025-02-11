@@ -1,5 +1,5 @@
 ### Привет! Меня зовут Оксана. Я начинающий системный аналитик. На данной странице находятся все выполненные мной кейсы.
-## 1. [Case "Телеграмм-бот РКН"](https://github.com/OYShtuka/Portfolio/tree/main/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20Telegram-%D0%B1%D0%BE%D1%82%20%D0%A0%D0%9A%D0%9D) 
+## 1. [Case "Телеграм-бот РКН"](https://github.com/OYShtuka/Portfolio/tree/main/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20Telegram-%D0%B1%D0%BE%D1%82%20%D0%A0%D0%9A%D0%9D) 
 Данный проект я успешно реализовала на предыдущем месте работы. Созданный Telegram-бот "РКН" упростил рутинные задачи диспетчеров тех.поддержки по взаимодействию с ЛК ФГУП"РЧЦ ЦФО".
 ## 2. [Case "Планировщик задач" (от Т-банка)](https://github.com/OYShtuka/Portfolio/tree/main/Case%20%D0%BE%D1%82%20T-%D0%B1%D0%B0%D0%BD%D0%BA%20(%D0%9F%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87))
 ## 3. [Case "Блокировка платежей (API + БД)" (от Т-банка)](https://github.com/OYShtuka/Portfolio/tree/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D0%B9%20(API%20%2B%20%D0%91%D0%94)%20Case%20%D0%BE%D1%82%20T-%D0%B1%D0%B0%D0%BD%D0%BA)
